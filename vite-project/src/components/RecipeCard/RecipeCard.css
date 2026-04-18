@@ -1,0 +1,15 @@
+.recipe-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+
+.recipe-card h4 {
+  margin: 10px 0 4px;
+}
+
+.recipe-card span {
+  font-size: 12px;
+  color: var(--text-light);
+}
