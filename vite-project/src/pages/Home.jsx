@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Section from "../components/Section/Section";
-import Footer from "../components/Footer/Footer"
+import Footer from "../components/Footer/Footer";
+import { useEffect } from "react";
+import ModalInfo from "../components/Modal/ModalInfo"
 
 const data = [
   { id: 1, title: "Italian tomato", time: 14, img: "/assets/1.jpg" },
@@ -10,9 +12,11 @@ const data = [
   { id: 4, title: "Snack cakes", time: 21, img: "/assets/4.jpg" },
 ];
 
+
 export default function Home() {
   return (
     <>
+      <ModalInfo></ModalInfo>
       <Navbar />
       <Hero />
 

@@ -1,100 +1,64 @@
 .navbar {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0;
   background: white;
-  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .logo {
-  height: 36px;
+  height: 40px;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 400px;
 }
 
 .search {
-  flex: 1;
-  padding: 10px 16px;
-  border-radius: 999px;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
   border: 1px solid #eee;
+  background: #f9f9f9;
 }
 
 .menu {
   display: flex;
-  gap: 16px;
+  gap: 25px;
+  color: #555;
   font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .auth {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: #f04e7c; /* Màu hồng Chefify */
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .subscribe {
-  top: 18px; 
-  left: 1281px; 
-  width: 107px; 
-  height: 44px; 
-  padding: 0 16px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-family: Manrope; 
-  font-size: 16px; 
-  line-height: 26px; 
-  font-weight: 400; 
-  color: #FFFFFFFF; /* white */
-  background: #F44B87FF; /* primary-500 */
-  opacity: 1; 
-  border: none; 
-  border-radius: 12px; /* border-xl */
-}
-
-.subscribe:hover {
-  color: #FFFFFFFF; /* white */
-  background: #F0105EFF; /* primary-600 */
-}
-/* Pressed */
-.subscribe:hover:active {
-  color: #FFFFFFFF; /* white */
-  background: #D20D52FF; /* primary-650 */
-}
-/* Disabled */
-.subscribe:disabled {
-  opacity: 0.4; 
-}
-
-.login{
-  top: 18px; 
-  left: 1195px; 
-  width: 73px; 
-  height: 44px; 
-  padding: 0 16px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-family: Manrope; 
-  font-size: 16px; 
-  line-height: 26px; 
-  font-weight: 400; 
-  color: #F44B87FF; /* primary-500 */
-  background: #FEF0F5FF; /* primary-100 */
-  opacity: 1; 
-  border: none; 
-  border-radius: 12px; /* border-xl */
-}
-
-.login:hover {
-  color: #F44B87FF; /* primary-500 */
-  background: #FDDCE8FF; /* primary-150 */
-}
-/* Pressed */
-.login:hover:active {
-  color: #F44B87FF; /* primary-500 */
-  background: #FBC8DAFF; /* primary-200 */
-}
-/* Disabled */
-.login:disabled {
-  opacity: 0.4; 
+  background: #f04e7c;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
 }

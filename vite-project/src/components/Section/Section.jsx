@@ -1,8 +1,11 @@
 import "./Section.css";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import Container from "../Layout/Container";
+import { useNavigate } from "react-router-dom";
 
 export default function Section({ title, desc, data }) {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <div className="section">
@@ -10,7 +13,15 @@ export default function Section({ title, desc, data }) {
         <p>{desc}</p>
 
         <div className="grid">
-          {data.map(i => <RecipeCard key={i.id} item={i} />)}
+          {data.map(i => (
+            <div
+              key={i.id}
+              onClick={() => navigate(`/recipe/${i.id}`)}
+              style={{ cursor: "pointer" }}
+            >
+              <RecipeCard item={i} />
+            </div>
+          ))}
         </div>
       </div>
     </Container>

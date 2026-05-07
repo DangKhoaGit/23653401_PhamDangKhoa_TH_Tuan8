@@ -1,0 +1,121 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Làm tối nền */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Đảm bảo luôn nằm trên cùng */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 824px;
+  max-height: 811px;
+  text-align: center;
+  position: relative;
+}
+
+.text h2{
+  font-family: Poppins; /* Heading */
+  font-size: 40px; 
+  line-height: 56px; 
+  font-weight: 700; 
+  color: #F44B87FF; /* primary-500 */
+  margin: 12px;
+}
+
+text{
+  top: 136px; 
+  left: 185px; 
+  font-family: Manrope; /* Body */
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 400; 
+  color: #171A1FFF; /* neutral-900 */
+}
+
+/* E remove 17 */
+.close-btn {
+  align-self: self-end;
+  top: 24px; 
+  left: 768px; 
+  width: 32px; 
+  height: 32px; 
+  fill: #171A1FFF; /* neutral-900 */
+}
+
+.button-next{
+  width: 362px; 
+  height: 44px; 
+  padding: 0 16px;
+  font-family: Manrope; 
+  font-size: 16px; 
+  line-height: 26px; 
+  font-weight: 400; 
+  color: #FFFFFFFF; /* white */
+  background: #F44B87FF; /* primary-500 */
+  opacity: 1; 
+  border: none; 
+  border-radius: 12px; /* border-xl */
+  align-self: center;
+  margin: 8px;
+}
+/* Hover */
+.button-next:hover {
+  color: #FFFFFFFF; /* white */
+  background: #F44B87FF; /* primary-500 */
+}
+/* Pressed */
+.button-next:hover:active {
+  color: #FFFFFFFF; /* white */
+  background: #F44B87FF; /* primary-500 */
+}
+/* Disabled */
+.button-next:disabled {
+  opacity: 0.4; 
+}
+
+
+.button-skip { 
+  top: 731px; 
+  left: 231px; 
+  width: 362px; 
+  height: 48px; 
+  padding: 0 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: Manrope; 
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 400; 
+  color: #F44B87FF; /* primary-500 */
+  background: #00000000; /* transparent */
+  opacity: 1; 
+  border: none; 
+  border-radius: 12px; /* border-xl */
+  align-self: center;
+  border: 1px solid #F44B87FF; /* primary-500 */
+}
+/* Hover */
+.button-skip .skip{
+  color: #F44B87FF; /* primary-500 */
+  background: #FDDCE8FF; /* primary-150 */
+}
+/* Pressed */
+.button-skip:hover:active .skip{
+  color: #F44B87FF; /* primary-500 */
+  background: #FBC8DAFF; /* primary-200 */
+}
+/* Disabled */
+.button-skip:disabled .skip{
+  opacity: 0.4; 
+}
