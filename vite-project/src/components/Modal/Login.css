@@ -14,6 +14,12 @@
   z-index: 9999; 
 }
 
+img{
+  height: 100%;
+  
+  object-fit: cover;
+}
+
 /* Container chính chia 2 cột */
 .login-container {
   background: white;
@@ -33,9 +39,9 @@
               url('https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=800&q=80');
   background-size: cover;
   background-position: center;
-  padding: 40px;
   display: flex;
   flex-direction: column;
+  align-self: center;
 }
 
 .quote-container h1 {
@@ -86,6 +92,7 @@
   border-radius: 10px;
   margin-bottom: 15px;
   background: #f9f9f9;
+  flex-shrink: 0;
 }
 
 .btn-continue {

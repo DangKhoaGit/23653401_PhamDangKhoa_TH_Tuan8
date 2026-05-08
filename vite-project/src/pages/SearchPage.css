@@ -1,0 +1,157 @@
+.search-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.search-content {
+  display: flex;
+  gap: 40px;
+}
+
+/* Sidebar Styles */
+.filters-sidebar {
+  width: 300px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.filter-section {
+  border-top: 1px solid #f0f0f0;
+  padding: 15px 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+  accent-color: #f64b81;
+}
+
+/* Time Slider Simulation */
+.range-slider {
+  padding: 10px 0;
+}
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.slider-track {
+  height: 4px;
+  background: #f64b81;
+  position: relative;
+  border-radius: 2px;
+}
+.slider-thumb {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #f64b81;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+}
+.slider-thumb.left { left: 20%; }
+.slider-thumb.right { right: 20%; }
+
+.stars-row {
+  color: #ffc107;
+  font-size: 16px;
+}
+
+.apply-btn {
+  width: 100%;
+  background-color: #f64b81;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Main Area Styles */
+.results-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.no-result-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.no-result-illustration {
+  margin-bottom: 30px;
+}
+
+.illustration-box {
+  width: 200px;
+  height: 150px;
+  background: #c3daff; /* Màu xanh nhạt của cái hộp */
+  position: relative;
+  border-radius: 8px;
+}
+
+.no-result-text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.suggested-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.tag.pink { background: #fdf2f8; color: #db2777; }
+.tag.purple { background: #f5f3ff; color: #7c3aed; }
+.tag.red { background: #fef2f2; color: #dc2626; }
+.tag.cyan { background: #ecfeff; color: #0891b2; }

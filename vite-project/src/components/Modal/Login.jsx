@@ -18,7 +18,7 @@ const Login = ({ isOpen, onClose }) => {
         {/* BÊN TRÁI: HÌNH ẢNH & QUOTE */}
         <div className="login-image-side">
           <div className="quote-container">
-            <img src={image} alt="" />
+            <img src={image} alt=""/>
           </div>
         </div>
 

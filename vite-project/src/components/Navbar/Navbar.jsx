@@ -2,14 +2,35 @@ import "./Navbar.css";
 import logo from "../../assets/Group 9.png";
 import Container from "../Layout/Container";
 import Login from "../Modal/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import SignUp from "../Modal/Signup";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [openSignup, setOpenSignUp] = useState(false);
 
   // Hàm để đóng Modal, có thể dùng lại ở nhiều nơi
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
+
+  const handleCloseSignup = () => setOpenSignUp(false);
+  const handleOpenSignup = () => setOpenSignUp(true);
+  
+
+  // Vô hiệu hóa scroll khi modal mở. Chưa hoàn thiện.
+  useEffect( () =>{
+    if(openSignup){
+      document.body.classList.add("overflow");
+    } else {
+      document.body.classList.remove("overflow");
+    }
+
+    // Cleanup function để remove event listener khi component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+
+  }, [] )
 
   return (
     <div className="navbar">
@@ -41,7 +62,8 @@ export default function Navbar() {
               Login
             </button>
 
-            <button className="subscribe">
+            <button className="subscribe"
+            onClick={handleOpenSignup}>
               Subscribe
             </button>
           </div>
@@ -55,6 +77,16 @@ export default function Navbar() {
           onClose={() => setOpen(false)} 
         />
       )}
+
+      {/* Render Modal SignUp dựa trên điều kiện openSignup */}
+      {openSignup && (
+        <SignUp 
+          isOpen={openSignup}  /* Đã sửa từ open thành openSignup */
+          onClose={handleCloseSignup} /* Dùng hàm handleCloseSignup đã tạo ở trên cho gọn */
+          
+        />
+      )}
+      
     </div>
   );
 }
