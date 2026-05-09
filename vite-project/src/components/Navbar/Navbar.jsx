@@ -4,6 +4,7 @@ import Container from "../Layout/Container";
 import Login from "../Modal/Login";
 import { useEffect, useState } from "react";
 import SignUp from "../Modal/Signup";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -18,19 +19,28 @@ export default function Navbar() {
   
 
   // Vô hiệu hóa scroll khi modal mở. Chưa hoàn thiện.
-  useEffect( () =>{
-    if(openSignup){
-      document.body.classList.add("overflow");
-    } else {
-      document.body.classList.remove("overflow");
-    }
+  // useEffect( () =>{
+  //   if(openSignup){
+  //     document.body.classList.add("overflow");
+  //   } else {
+  //     document.body.classList.remove("overflow");
+  //   }
 
-    // Cleanup function để remove event listener khi component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
+  //   // Cleanup function để remove event listener khi component unmount
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   }
 
-  }, [] )
+  // }, [] )
+
+  const [search, setSearch] = useState(""); // Khởi tạo là chuỗi rỗng
+  const navigate = useNavigate();
+
+  const handlerSearch = (title) => {
+    if (title && title.trim() !== "") {
+      navigate(`/search/${title}`);
+    }
+  };
 
   return (
     <div className="navbar">
@@ -44,6 +54,11 @@ export default function Navbar() {
             <input
               className="search"
               placeholder="What would you like to cook?"
+              value={search}
+              // 1. Cập nhật state khi người dùng gõ phím
+              onChange={(e) => setSearch(e.target.value)}
+              // 2. (Gợi ý thêm) Chuyển trang khi nhấn Enter để trải nghiệm tốt hơn
+              onKeyDown={(e) => e.key === 'Enter' && handlerSearch(search)}
             />
           </div>
 

@@ -5,12 +5,13 @@ import Footer from '../components/Footer/Footer';
 import { useParams } from 'react-router-dom';
 import {useRecoilValue} from 'recoil';
 import {recipeState} from "../recoil/recipeAtom";
+import Section from '../components/Section/Section';
 
 const SearchPage = () => {
   const {title} = useParams();
-  const recipe = useRecoilValue(recipeState);
+  const recipes = useRecoilValue(recipeState);
   
-
+  const recipeList = recipes.filter(r=> r.id.includes(title) || r.title.includes(title));
 
   return (
     <>
@@ -82,23 +83,38 @@ const SearchPage = () => {
 
         {/* Main Result Area */}
         <main className="results-area">
-          <h2 className="no-result-title">Sorry, no results were found for</h2>
-          
-          <div className="no-result-illustration">
-             {/* Thay bằng ảnh thật của bạn nếu có */}
-            <div className="illustration-box">
-               <div className="magnifier">❌</div>
-               <div className="box-base"></div>
-            </div>
-          </div>
+          {
+            recipeList == null &&
+            <h2 className="no-result-title">Sorry, no results were found for {title}</h2>
+          }
 
-          <p className="no-result-text">We have all your Independence Day sweets covered.</p>
+          {
+            recipeList != null &&
+            <Section data={recipeList}></Section>
+          }
           
-          <div className="suggested-tags">
-            <span className="tag pink">Sweet Cake</span>
-            <span className="tag purple">Black Cake</span>
-            <span className="tag red">Pozole Verde</span>
-            <span className="tag cyan">Healthy food</span>
+          {
+            recipeList == null &&
+            
+            <div className="no-result-illustration">
+              <div className="illustration-box">
+                <div className="magnifier">❌</div>
+                <div className="box-base"></div>
+              </div>
+            </div>
+          }
+
+          <div>
+            <hr />
+
+            <p className="no-result-text goiy">We have all your Independence Day sweets covered.</p>
+            
+            <div className="suggested-tags goiy">
+              <span className="tag pink">Sweet Cake</span>
+              <span className="tag purple">Black Cake</span>
+              <span className="tag red">Pozole Verde</span>
+              <span className="tag cyan">Healthy food</span>
+            </div>
           </div>
         </main>
       </div>
