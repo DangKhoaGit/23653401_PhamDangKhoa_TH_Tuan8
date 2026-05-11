@@ -11,12 +11,12 @@ const Login = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  const handlerLogin = () => {
-    const data = [];
-    const promise = fetch(`user.json`)
-    .then( e => {
-      console.log(e.body);
-    } )
+  const handlerLogin = async (params) => {
+    const respone = await fetch(`user.json`);
+    if(respone.ok){
+      const data = await respone.json();
+      console.log(data);
+    }
 
   }
 
