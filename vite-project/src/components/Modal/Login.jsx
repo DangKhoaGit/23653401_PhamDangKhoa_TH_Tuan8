@@ -2,19 +2,28 @@ import React, { useState } from "react";
 import "./Login.css"; // Chúng ta sẽ viết CSS ở file này
 import { FaTimes, FaGoogle, FaFacebook, FaApple } from "../../../node_modules/react-icons/fa";
 import image from "../../assets/Image 72.png"
+import { useRecoilValue } from "recoil";
+// import { userAtom } from "../../recoil/userAtom";
 
 const Login = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
+  // const userAtom = useRecoilValue(userAtom);
 
   if (!isOpen) return null;
 
-  return (
-    <div className="login-overlay">
-        
-      {/* Quan trọng: Phải gắn onClick={onClose} vào nút X hoặc overlay */}
-      <button onClick={onClose} className="close-button">X</button>
+  const handlerLogin = () => {
+    const data = [];
+    const promise = fetch(`user.json`)
+    .then( e => {
+      console.log(e.body);
+    } )
 
-      <div className="login-container">
+  }
+
+  return (
+    <div className="login-overlay" onClick={onClose}>
+
+      <div className="login-container" onClick={(e) => {e.stopPropagation()}}>
         {/* BÊN TRÁI: HÌNH ẢNH & QUOTE */}
         <div className="login-image-side">
           <div className="quote-container">
@@ -24,12 +33,19 @@ const Login = ({ isOpen, onClose }) => {
 
         {/* BÊN PHẢI: FORM ĐĂNG NHẬP */}
         <div className="login-form-side">
-          <button className="close-btn" onClick={onClose}>
-            <FaTimes />
-          </button>
+          
 
           <div className="form-content">
-            <h2>Login</h2>
+            <div style={{
+              display: "flex",
+              justifyContent: "space-between"
+            }}>
+              <h2>Login</h2>
+              <button className="close-btn" onClick={onClose}>
+            <FaTimes />
+          </button>
+            </div>
+            
             <p className="subtitle">Enter your email to log in.</p>
 
             <input
@@ -40,7 +56,7 @@ const Login = ({ isOpen, onClose }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <button className="btn-continue">Continue</button>
+            <button className="btn-continue" onClick={handlerLogin()}>Continue</button>
 
             <div className="separator">
               <span>OR</span>

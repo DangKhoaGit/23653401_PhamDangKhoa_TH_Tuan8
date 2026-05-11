@@ -5,10 +5,13 @@ import Login from "../Modal/Login";
 import { useEffect, useState } from "react";
 import SignUp from "../Modal/Signup";
 import { Link, useNavigate } from "react-router-dom";
+import {userAtom} from "../../recoil/userAtom";
+import { useRecoilValue } from "recoil";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [openSignup, setOpenSignUp] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   // Hàm để đóng Modal, có thể dùng lại ở nhiều nơi
   const handleClose = () => setOpen(false);
@@ -16,22 +19,17 @@ export default function Navbar() {
 
   const handleCloseSignup = () => setOpenSignUp(false);
   const handleOpenSignup = () => setOpenSignUp(true);
+
+  const userAuthen = useRecoilValue(userAtom);
   
+  useEffect( () =>{
 
-  // Vô hiệu hóa scroll khi modal mở. Chưa hoàn thiện.
-  // useEffect( () =>{
-  //   if(openSignup){
-  //     document.body.classList.add("overflow");
-  //   } else {
-  //     document.body.classList.remove("overflow");
-  //   }
+    const user = localStorage.getItem("user");
+    if( user !== null) {
+      
+    }
 
-  //   // Cleanup function để remove event listener khi component unmount
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   }
-
-  // }, [] )
+  } , [userAtom])
 
   const [search, setSearch] = useState(""); // Khởi tạo là chuỗi rỗng
   const navigate = useNavigate();

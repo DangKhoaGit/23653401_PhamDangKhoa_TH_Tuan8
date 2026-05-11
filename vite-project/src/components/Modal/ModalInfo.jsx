@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./ModalInfo.css"
 import image from "../../assets/Image 93.png"
 
 export default function IntroModal() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const ref = useRef(null);
 
   useEffect(() => {
     // Tự động mở modal sau khi trang web load xong
@@ -12,8 +14,15 @@ export default function IntroModal() {
 
   if (!isOpen) return null; // Nếu isOpen = false thì không vẽ gì ra màn hình cả
 
+  const handleClose = (e) => {
+    // Chỉ đóng nếu click vào đúng lớp overlay, không đóng khi click vào con của nó
+    if (e.target.className.includes("modal-overlay")) {
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <div className="modal-overlay text">
+    <div className="modal-overlay text" onClick={handleClose} ref={ref}>
       <div className="modal-content">
         <button className="close-btn" onClick={() => setIsOpen(false)}>×</button>
         <h2>Discover Chefify</h2>

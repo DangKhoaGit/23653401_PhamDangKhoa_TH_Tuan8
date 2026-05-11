@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "first_name": "Minh",
+    "last_name": "Nguyen",
+    "email": "minh.nguyen@gmail.com",
+    "password": "Password123!",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 2,
+    "first_name": "Linh",
+    "last_name": "Tran",
+    "email": "linhtran.dev@gmail.com",
+    "password": "SecurePass88*",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 3,
+    "first_name": "Hoang",
+    "last_name": "Pham",
+    "email": "hoangpham99@gmail.com",
+    "password": "Hoang@2024!",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 4,
+    "first_name": "Anh",
+    "last_name": "Le",
+    "email": "anh.le.tester@gmail.com",
+    "password": "TestAccount1!",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 5,
+    "first_name": "Tu",
+    "last_name": "Vu",
+    "email": "vuanhtu@gmail.com",
+    "password": "MySecretPass99",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 6,
+    "first_name": "Phuong",
+    "last_name": "Dang",
+    "email": "phuong.dang@gmail.com",
+    "password": "ReactJS_Coder26",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 7,
+    "first_name": "Huy",
+    "last_name": "Do",
+    "email": "huy.do.office@gmail.com",
+    "password": "HuyDo@123456",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 8,
+    "first_name": "Thuy",
+    "last_name": "Bui",
+    "email": "thuybui.design@gmail.com",
+    "password": "Design_Pass_01",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 9,
+    "first_name": "Quoc",
+    "last_name": "Hoang",
+    "email": "quoc.hoang.92@gmail.com",
+    "password": "StrongPassword!92",
+    "agreed_to_terms": true
+  },
+  {
+    "id": 10,
+    "first_name": "Mai",
+    "last_name": "Trinh",
+    "email": "mai.trinh.work@gmail.com",
+    "password": "MaiTrinh_2026!",
+    "agreed_to_terms": true
+  }
+]
