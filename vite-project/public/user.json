@@ -5,6 +5,11 @@
     "last_name": "Nguyen",
     "email": "minh.nguyen@gmail.com",
     "password": "Password123!",
+    "provider": "local",
+    "avatar": "https://i.pravatar.cc/150?img=1",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:00:00Z",
     "agreed_to_terms": true
   },
   {
@@ -13,6 +18,11 @@
     "last_name": "Tran",
     "email": "linhtran.dev@gmail.com",
     "password": "SecurePass88*",
+    "provider": "local",
+    "avatar": "https://i.pravatar.cc/150?img=2",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:05:00Z",
     "agreed_to_terms": true
   },
   {
@@ -21,6 +31,11 @@
     "last_name": "Pham",
     "email": "hoangpham99@gmail.com",
     "password": "Hoang@2024!",
+    "provider": "local",
+    "avatar": "https://i.pravatar.cc/150?img=3",
+    "role": "admin",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:10:00Z",
     "agreed_to_terms": true
   },
   {
@@ -29,6 +44,11 @@
     "last_name": "Le",
     "email": "anh.le.tester@gmail.com",
     "password": "TestAccount1!",
+    "provider": "google",
+    "avatar": "https://i.pravatar.cc/150?img=4",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:15:00Z",
     "agreed_to_terms": true
   },
   {
@@ -36,7 +56,12 @@
     "first_name": "Tu",
     "last_name": "Vu",
     "email": "vuanhtu@gmail.com",
-    "password": "MySecretPass99",
+    "password": null,
+    "provider": "facebook",
+    "avatar": "https://i.pravatar.cc/150?img=5",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:20:00Z",
     "agreed_to_terms": true
   },
   {
@@ -45,6 +70,11 @@
     "last_name": "Dang",
     "email": "phuong.dang@gmail.com",
     "password": "ReactJS_Coder26",
+    "provider": "local",
+    "avatar": "https://i.pravatar.cc/150?img=6",
+    "role": "user",
+    "is_verified": false,
+    "created_at": "2026-05-11T10:25:00Z",
     "agreed_to_terms": true
   },
   {
@@ -53,6 +83,11 @@
     "last_name": "Do",
     "email": "huy.do.office@gmail.com",
     "password": "HuyDo@123456",
+    "provider": "local",
+    "avatar": "https://i.pravatar.cc/150?img=7",
+    "role": "moderator",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:30:00Z",
     "agreed_to_terms": true
   },
   {
@@ -60,7 +95,12 @@
     "first_name": "Thuy",
     "last_name": "Bui",
     "email": "thuybui.design@gmail.com",
-    "password": "Design_Pass_01",
+    "password": null,
+    "provider": "google",
+    "avatar": "https://i.pravatar.cc/150?img=8",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:35:00Z",
     "agreed_to_terms": true
   },
   {
@@ -69,6 +109,11 @@
     "last_name": "Hoang",
     "email": "quoc.hoang.92@gmail.com",
     "password": "StrongPassword!92",
+    "provider": "local",
+    "avatar": "https://i.pravatar.cc/150?img=9",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:40:00Z",
     "agreed_to_terms": true
   },
   {
@@ -76,7 +121,12 @@
     "first_name": "Mai",
     "last_name": "Trinh",
     "email": "mai.trinh.work@gmail.com",
-    "password": "MaiTrinh_2026!",
+    "password": null,
+    "provider": "facebook",
+    "avatar": "https://i.pravatar.cc/150?img=10",
+    "role": "user",
+    "is_verified": true,
+    "created_at": "2026-05-11T10:45:00Z",
     "agreed_to_terms": true
   }
 ]
