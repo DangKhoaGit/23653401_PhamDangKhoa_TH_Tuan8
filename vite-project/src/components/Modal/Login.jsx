@@ -71,7 +71,7 @@ const Login = ({ isOpen, onClose }) => {
       if (user && user.password === pass) {
         setUser(user);
 
-        console.log("Đăng nhập thành công");
+        console.log("Đăng nhập thành công \n", user);
 
         // đóng modal
         onClose();

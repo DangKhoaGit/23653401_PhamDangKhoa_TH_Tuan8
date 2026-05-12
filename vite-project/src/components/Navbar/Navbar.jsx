@@ -39,6 +39,15 @@ export default function Navbar() {
       navigate(`/search/${title}`);
     }
   };
+    
+  useEffect(() => {
+    // Kiểm tra nếu userAtom tồn tại và có chứa dữ liệu người dùng (ví dụ có id)
+    if (userAtom && userAtom.id) {
+      setIsLogin(true);
+    } else {
+      setIsLogin(false);
+    }
+  }, [userAtom]); // Dependency này đúng, sẽ chạy lại mỗi khi dữ liệu user thay đổi
 
   return (
     <div className="navbar">
@@ -68,18 +77,32 @@ export default function Navbar() {
             <span>About Us</span>
           </div>
 
-          <div className="auth">
-            {/* Nút Login kích hoạt state open */}
-            <button className="login-btn" onClick={handleOpen}>
-              {console.log("Đã bấm login")}
-              Login
-            </button>
-
-            <button className="subscribe"
-            onClick={handleOpenSignup}>
-              Subscribe
-            </button>
-          </div>
+          {isLogin ? (
+            /* Giao diện khi ĐÃ đăng nhập */
+            <div className="user-profile">
+              <button 
+                className="recipe-box-btn" 
+                onClick={handleChangeRecipeBox} // Sửa lỗi gọi hàm tại đây
+              >
+                Your recipe box
+              </button>
+              <img 
+                src={userAtom?.avatar || defaultAvatar} 
+                className="nav-avatar" 
+                alt="User Avatar" 
+              />
+            </div>
+          ) : (
+            /* Giao diện khi CHƯA đăng nhập */
+            <div className="auth">
+              <button className="login-btn" onClick={handleOpen}>
+                Login
+              </button>
+              <button className="subscribe" onClick={handleOpenSignup}>
+                Subscribe
+              </button>
+            </div>
+          )}
         </div>
       </Container>
 
